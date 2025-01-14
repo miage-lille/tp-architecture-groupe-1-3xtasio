@@ -1,5 +1,6 @@
 import { differenceInDays } from 'date-fns';
 import { Entity } from 'src/shared/entity';
+import { Participation } from './participation.entity';
 
 type WebinarProps = {
   id: string;
@@ -25,5 +26,8 @@ export class Webinar extends Entity<WebinarProps> {
 
   isOrganizer(userId: string) {
     return this.props.organizerId === userId;
+  }
+  hasAvailableSeat(participations: Participation[]): boolean {
+    return participations.length >= this.props.seats;
   }
 }
