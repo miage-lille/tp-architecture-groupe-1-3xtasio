@@ -81,7 +81,7 @@ describe('Feature: Organize webinars', () => {
     it('should not insert the webinar in the repository', async () => {
       try {
         await useCase.execute(payload);
-      } catch (error) {}
+      } catch (error) { }
 
       expect(repository.database).toEqual([]);
     });
@@ -105,7 +105,7 @@ describe('Feature: Organize webinars', () => {
     it('should not insert the webinar in the repository', async () => {
       try {
         await useCase.execute(payload);
-      } catch (error) {}
+      } catch (error) { }
 
       expect(repository.database).toEqual([]);
     });
@@ -129,7 +129,7 @@ describe('Feature: Organize webinars', () => {
     it('should not insert the webinar in the repository', async () => {
       try {
         await useCase.execute(payload);
-      } catch (error) {}
+      } catch (error) { }
 
       expect(repository.database).toEqual([]);
     });

@@ -22,7 +22,7 @@ export class OrganizeWebinars implements Executable<Request, Response> {
     private readonly webinarRepository: IWebinarRepository,
     private readonly idGenerator: IIdGenerator,
     private readonly dateGenerator: IDateGenerator,
-  ) {}
+  ) { }
 
   async execute(data: Request) {
     const id = this.idGenerator.generate();
